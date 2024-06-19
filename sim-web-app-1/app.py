@@ -1,5 +1,5 @@
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Image, PageBreak
-from pylab import *
+# from pylab import *
 import streamlit as st
 import pandas as pd
 from reportlab.lib.pagesizes import letter, landscape
