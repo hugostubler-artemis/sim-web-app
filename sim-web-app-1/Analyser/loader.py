@@ -12,7 +12,7 @@ import datetime
 import seaborn as sns
 import time
 from matplotlib import rcParams
-from matplotlib.cm import get_cmap
+# from matplotlib.cm import get_cmap
 
 
 def get_good_naming(naming_path):
