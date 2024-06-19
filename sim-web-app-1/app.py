@@ -151,7 +151,8 @@ def create_page_with_layout(file_name):
     table_data_1 = [
         [
             # [Image(f'{pngs_path}/naming.png', width=220, height=220), Image('pngs/wind_log.png',  width=220, height=200),
-            # Image('pngs/', width=100, height=100)],
+            # Image('pngs/', width=100, height=100)
+        ],
         [Image(f'{pngs_path}/tracking.png', width=300, height=200), Image(f'{pngs_path}/wind_phases.png',  width=220, height=200),
          Image(f'{pngs_path}/crew_perc_phases.png', width=150, height=150)]
     ]
