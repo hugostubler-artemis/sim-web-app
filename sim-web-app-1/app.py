@@ -355,7 +355,7 @@ if st.button("Generate PDF Report") and uploaded_csv:
     plt.figure(figsize=(20, 20))
     rcParams['figure.figsize'] = 22, 22
     sns.scatterplot(data=filtered_logs.reset_index(), x='x', y='y', hue='TACK')
-    plt.savefig('pngs/tracking.png', bbox_inches='tight')
+    plt.savefig(f'{pngs_path}/tracking.png', bbox_inches='tight')
 
     sns.set(rc={"figure.figsize": (8, 4)})
 
@@ -366,7 +366,7 @@ if st.button("Generate PDF Report") and uploaded_csv:
     subplot(1, 2, 2)
     ax = sns.histplot(data=filtered_logs.reset_index(), x='TWD', hue='TACK')
 
-    plt.savefig("pngs/wind_log.png")
+    plt.savefig(f"{pngs_path}/wind_log.png")
     plt.show()
     # Filters used (standard would be 18, 2, 2)
 
@@ -393,7 +393,7 @@ if st.button("Generate PDF Report") and uploaded_csv:
 
     # Save the plot as a PNG image
     # bbox_inches='tight' ensures no extra whitespace
-    plt.savefig('pngs/boat_perc_phases.png', bbox_inches='tight')
+    plt.savefig(f'{pngs_path}/boat_perc_phases.png', bbox_inches='tight')
     st.write("Creating the pngs...")
     time.sleep(1)
     # Show the plot (optional)
