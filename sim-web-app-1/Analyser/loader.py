@@ -7,7 +7,7 @@ import seaborn as sns
 import matplotlib
 import statsmodels.api as sm
 import streamlit as st
-import pylab as py
+# import pylab as py
 import datetime
 import seaborn as sns
 import time
