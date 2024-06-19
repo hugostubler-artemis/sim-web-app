@@ -164,8 +164,8 @@ def create_page_with_layout(file_name):
     table_data_2 = [
         [Paragraph("UPWIND", styles["Heading2"]),
          Paragraph("DOWNWIND", styles["Heading2"])],
-        [Image(f'{pngs_path}/report_up.png', width=230, height=360),
-         Image(f'{pngs_path}/report_down.png',  width=230, height=360)],
+        #[Image(f'{pngs_path}/report_up.png', width=230, height=360),
+        # Image(f'{pngs_path}/report_down.png',  width=230, height=360)],
 
     ]
     table2 = Table(table_data_2)
@@ -255,9 +255,9 @@ def create_page_with_layout(file_name):
     table_data_3 = [
         [Paragraph("Tacks", styles["Heading2"]),
          Paragraph("Gybes", styles["Heading2"])],
-        [Image(f'{pngs_path}/tack_table.png', width=230, height=360),
-         Image(f'{pngs_path}/gybe_table.png',  width=230, height=360)],
-
+        #[Image(f'{pngs_path}/tack_table.png', width=230, height=360),
+        # Image(f'{pngs_path}/gybe_table.png',  width=230, height=360)],
+            
     ]
     table3 = Table(table_data_3)
     elements.append(table3)
@@ -481,10 +481,10 @@ if st.button("Generate PDF Report") and uploaded_csv:
     plt.close()
 
     report_up = get_phase_report(upwind)
-    dfi.export(report_up, f'{pngs_path}/report_up.png', table_conversion = 'matplotlib')
+    # dfi.export(report_up, f'{pngs_path}/report_up.png', table_conversion = 'matplotlib')
     plt.close()
     report_down = get_phase_report(downwind)
-    dfi.export(report_down, f'{pngs_path}/report_down.png', table_conversion = 'matplotlib')
+    # dfi.export(report_down, f'{pngs_path}/report_down.png', table_conversion = 'matplotlib')
     plt.close()
 
     sns.heatmap(upwind[var_of_interest].corr(), annot=True)
@@ -498,7 +498,7 @@ if st.button("Generate PDF Report") and uploaded_csv:
                                                                            'exit_rh', 'exit_heel', 'exit_pitch', 'max_yaw_rate',
                                                                            'turn_min_rh', 'turn_time', 'dev_yaw_rate',
                                                                            'turn_rh', 'turn_pitch', 'turn_heel', 'poptime']].T.style.format(precision=1).background_gradient(cmap="YlGnBu", axis=1)
-    dfi.export(tack_table, f'{pngs_path}/tack_table.png',table_conversion = 'matplotlib')
+    # dfi.export(tack_table, f'{pngs_path}/tack_table.png',table_conversion = 'matplotlib')
     plt.close()
     gybe_table = man[man.man_type == 'gybe'].groupby('tackside').median()[['tws', 'flying', 'vmg_loss', 'vmg_loss_target', 'distance', 'entry_bsp', 'exit_bsp',
                                                                            'min_bsp', 'entry_twa', 'exit_twa', 'exit_vmg',
@@ -508,7 +508,7 @@ if st.button("Generate PDF Report") and uploaded_csv:
                                                                            'exit_rh', 'exit_heel', 'exit_pitch', 'max_yaw_rate',
                                                                            'turn_min_rh', 'turn_time', 'dev_yaw_rate',
                                                                            'turn_rh', 'turn_pitch', 'turn_heel', 'poptime']].T.style.format(precision=1).background_gradient(cmap="YlGnBu", axis=1)
-    dfi.export(gybe_table, f'{pngs_path}/gybe_table.png',table_conversion = 'matplotlib')
+    # dfi.export(gybe_table, f'{pngs_path}/gybe_table.png',table_conversion = 'matplotlib')
     plt.close()
 
     # pdf_name = f"pdfs/PerfReport_{race}_240319"
