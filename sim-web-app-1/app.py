@@ -182,8 +182,8 @@ def create_page_with_layout(file_name):
                 table_data = [
                     [Paragraph("UPWIND", styles["Heading2"]),
                      Paragraph("DOWNWIND", styles["Heading2"])],
-                    [Image(f'pngs/fig_n{i}.png', width=W, height=H),
-                     Image(f'pngs/fig_n{i+1}.png',  width=W, height=H)]
+                    [Image(f'{pngs_path}/fig_n{i}.png', width=W, height=H),
+                     Image(f'{pngs_path}/fig_n{i+1}.png',  width=W, height=H)]
                 ]
                 table = Table(table_data)
                 elements.append(table)
@@ -192,7 +192,7 @@ def create_page_with_layout(file_name):
             else:
                 table_data = [
                     [Paragraph("UPWIND", styles["Heading2"])],
-                    [Image(f'pngs/fig_n{i}.png',
+                    [Image(f'{pngs_path}/fig_n{i}.png',
                            width=W*1.5, height=H*1.2)]
                 ]
                 table = Table(table_data)
@@ -208,7 +208,7 @@ def create_page_with_layout(file_name):
         else:
             table_data = [
                 [Paragraph("DOWNWIND", styles["Heading2"])],
-                [Image(f'pngs/fig_n{i+1}.png', width=W*1.5, height=H*1.2)]
+                [Image(f'{pngs_path}/fig_n{i+1}.png', width=W*1.5, height=H*1.2)]
             ]
             table = Table(table_data)
             elements.append(table)
@@ -222,8 +222,8 @@ def create_page_with_layout(file_name):
         # Create table with upwind and downwind plots side by side
         table_correlation_upwind = [
             [Paragraph("UPWIND", styles["Heading2"])],
-            [Image('pngs/fig_n12.png',  width=W, height=H),
-             Image('pngs/heatmap_up.png',  width=W, height=H)]
+            [Image(f'{pngs_path}/fig_n12.png',  width=W, height=H),
+             Image(f'{pngs_path}/heatmap_up.png',  width=W, height=H)]
         ]
         table_corr_up = Table(table_correlation_upwind)
         elements.append(table_corr_up)
@@ -236,8 +236,8 @@ def create_page_with_layout(file_name):
         # Create table with upwind and downwind plots side by side
         table_correlation_downwind = [
             [Paragraph("DOWNWIND", styles["Heading2"])],
-            [Image('pngs/fig_n13.png',  width=W, height=H),
-             Image('pngs/heatmap_down.png',  width=W, height=H)]
+            [Image(f'{pngs_path}/fig_n13.png',  width=W, height=H),
+             Image(f'{pngs_path}/heatmap_down.png',  width=W, height=H)]
         ]
         table_corr_down = Table(table_correlation_downwind)
         elements.append(table_corr_down)
@@ -255,8 +255,8 @@ def create_page_with_layout(file_name):
     table_data_3 = [
         [Paragraph("Tacks", styles["Heading2"]),
          Paragraph("Gybes", styles["Heading2"])],
-        [Image('pngs/tack_table.png', width=230, height=360),
-         Image('pngs/gybe_table.png',  width=230, height=360)],
+        [Image(f'{pngs_path}/tack_table.png', width=230, height=360),
+         Image(f'{pngs_path}/gybe_table.png',  width=230, height=360)],
 
     ]
     table3 = Table(table_data_3)
@@ -273,8 +273,8 @@ def create_page_with_layout(file_name):
                 table_data = [
                     [Paragraph("TACKS", styles["Heading2"]),
                      Paragraph("GYBES", styles["Heading2"])],
-                    [Image(f'pngs/fig_man_n{i}.png', width=W, height=H),
-                     Image(f'pngs/fig_man_n{i+1}.png',  width=W, height=H)]
+                    [Image(f'{pngs_path}/fig_man_n{i}.png', width=W, height=H),
+                     Image(f'{pngs_path}/fig_man_n{i+1}.png',  width=W, height=H)]
                 ]
                 table = Table(table_data)
                 elements.append(table)
@@ -283,7 +283,7 @@ def create_page_with_layout(file_name):
             else:
                 table_data = [
                     [Paragraph("TACKS", styles["Heading2"])],
-                    [Image(f'pngs/fig_man_n{i}.png',
+                    [Image(f'{pngs_path}/fig_man_n{i}.png',
                            width=W*1.5, height=H*1.2)]
                 ]
                 table = Table(table_data)
@@ -299,7 +299,7 @@ def create_page_with_layout(file_name):
         else:
             table_data = [
                 [Paragraph("GYBES", styles["Heading2"])],
-                [Image(f'pngs/fig_man_n{i+1}.png',
+                [Image(f'{pngs_path}/fig_man_n{i+1}.png',
                        width=W*1.5, height=H*1.2)]
             ]
             table = Table(table_data)
@@ -411,7 +411,7 @@ if st.button("Generate PDF Report") and uploaded_csv:
 
     # Save the plot as a PNG image
     # bbox_inches='tight' ensures no extra whitespace
-    plt.savefig('pngs/crew_perc_phases.png', bbox_inches='tight')
+    plt.savefig(f'{pngs_path}/crew_perc_phases.png', bbox_inches='tight')
 
     # Show the plot (optional)
     # plt.show()
@@ -424,7 +424,7 @@ if st.button("Generate PDF Report") and uploaded_csv:
     plt.subplot(1, 2, 2)
     ax = sns.histplot(data=all_phases, x='TWD', hue='TACK')
 
-    plt.savefig("pngs/wind_phases.png")
+    plt.savefig(f"{pngs_path}/wind_phases.png")
     # plt.show()
     plt.close()
     plt.figure(figsize=(10, 10))
@@ -440,12 +440,12 @@ if st.button("Generate PDF Report") and uploaded_csv:
                 if i == 1:
                     rcParams['figure.figsize'] = 10, 10
                     get_subplots(df, var_list, "TWS_kts", "TACK",
-                                 1, color_list, dico, f'pngs/fig_n{k}')
+                                 1, color_list, dico, f'{pngs_path}/fig_n{k}')
                     k += 1
                 else:
                     rcParams['figure.figsize'] = 10, 10
                     get_subplots(df, var_list, "TWS_kts", "TACK",
-                                 1, color_list, dico, f'pngs/fig_n{k}')
+                                 1, color_list, dico, f'{pngs_path}/fig_n{k}')
                     k += 1
     plt.close()
 
@@ -454,7 +454,7 @@ if st.button("Generate PDF Report") and uploaded_csv:
             k += 1
         else:
             get_subplots_v2(df, correlations_to_plots,  "TACK",
-                            1, color_list, dico, f'pngs/fig_n{k}')
+                            1, color_list, dico, f'{pngs_path}/fig_n{k}')
             k += 1
 
     k = 0
@@ -473,22 +473,22 @@ if st.button("Generate PDF Report") and uploaded_csv:
             # else :
             rcParams['figure.figsize'] = 10, 10
             get_subplots_man(df, var_list, "tws", "tackside",
-                             1, color_list, dico, f'pngs/fig_man_n{k}')
+                             1, color_list, dico, f'{pngs_path}/fig_man_n{k}')
             k += 1
 
     sns.heatmap(downwind[var_of_interest].corr(), annot=True)
-    plt.savefig('pngs/heatmap_down.png')
+    plt.savefig(f'{pngs_path}/heatmap_down.png')
     plt.close()
 
     report_up = get_phase_report(upwind)
-    dfi.export(report_up, 'pngs/report_up.png')
+    dfi.export(report_up, f'{pngs_path}/report_up.png')
     plt.close()
     report_down = get_phase_report(downwind)
-    dfi.export(report_down, 'pngs/report_down.png')
+    dfi.export(report_down, f'{pngs_path}/report_down.png')
     plt.close()
 
     sns.heatmap(upwind[var_of_interest].corr(), annot=True)
-    plt.savefig('pngs/heatmap_up.png')
+    plt.savefig(f'{pngs_path}/heatmap_up.png')
     plt.close()
     tack_table = man[man.man_type == 'tack'].groupby('tackside').median()[['tws', 'flying', 'vmg_loss', 'vmg_loss_target', 'distance', 'entry_bsp', 'exit_bsp',
                                                                            'min_bsp', 'entry_twa', 'exit_twa', 'exit_vmg',
@@ -498,7 +498,7 @@ if st.button("Generate PDF Report") and uploaded_csv:
                                                                            'exit_rh', 'exit_heel', 'exit_pitch', 'max_yaw_rate',
                                                                            'turn_min_rh', 'turn_time', 'dev_yaw_rate',
                                                                            'turn_rh', 'turn_pitch', 'turn_heel', 'poptime']].T.style.format(precision=1).background_gradient(cmap="YlGnBu", axis=1)
-    dfi.export(tack_table, 'pngs/tack_table.png')
+    dfi.export(tack_table, f'{pngs_path}/tack_table.png')
     plt.close()
     gybe_table = man[man.man_type == 'gybe'].groupby('tackside').median()[['tws', 'flying', 'vmg_loss', 'vmg_loss_target', 'distance', 'entry_bsp', 'exit_bsp',
                                                                            'min_bsp', 'entry_twa', 'exit_twa', 'exit_vmg',
@@ -508,7 +508,7 @@ if st.button("Generate PDF Report") and uploaded_csv:
                                                                            'exit_rh', 'exit_heel', 'exit_pitch', 'max_yaw_rate',
                                                                            'turn_min_rh', 'turn_time', 'dev_yaw_rate',
                                                                            'turn_rh', 'turn_pitch', 'turn_heel', 'poptime']].T.style.format(precision=1).background_gradient(cmap="YlGnBu", axis=1)
-    dfi.export(gybe_table, 'pngs/gybe_table.png')
+    dfi.export(gybe_table, f'{pngs_path}/gybe_table.png')
     plt.close()
 
     # pdf_name = f"pdfs/PerfReport_{race}_240319"
