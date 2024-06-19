@@ -2,7 +2,5 @@ reportlab
 matplotlib
 streamlit
 seaborn
-math
 statsmodels
-datetime
 arrow
