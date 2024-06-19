@@ -30,6 +30,7 @@ from Analyser.loader import get_metadata, get_one_boat_logs_bis
 import seaborn as sns
 import time
 import matplotlib
+import matplotlib.pyplot as plt
 from matplotlib import rcParams
 cm = sns.light_palette("green", as_cmap=True)
 colors = ["RdBu"]
@@ -359,11 +360,11 @@ if st.button("Generate PDF Report") and uploaded_csv:
 
     sns.set(rc={"figure.figsize": (8, 4)})
 
-    subplot(1, 2, 1)
+    plt.subplot(1, 2, 1)
     ax = sns.histplot(data=filtered_logs.reset_index(),
                       x='TWS_kts', hue='TACK')
 
-    subplot(1, 2, 2)
+    plt.subplot(1, 2, 2)
     ax = sns.histplot(data=filtered_logs.reset_index(), x='TWD', hue='TACK')
 
     plt.savefig(f"{pngs_path}/wind_log.png")
@@ -417,10 +418,10 @@ if st.button("Generate PDF Report") and uploaded_csv:
 
     sns.set(rc={"figure.figsize": (8, 4)})
 
-    subplot(1, 2, 1)
+    plt.subplot(1, 2, 1)
     ax = sns.histplot(data=all_phases, x='TWS_kts', hue='TACK')
 
-    subplot(1, 2, 2)
+    plt.subplot(1, 2, 2)
     ax = sns.histplot(data=all_phases, x='TWD', hue='TACK')
 
     plt.savefig("pngs/wind_phases.png")
