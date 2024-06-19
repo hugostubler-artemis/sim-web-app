@@ -35,7 +35,7 @@ cm = sns.light_palette("green", as_cmap=True)
 colors = ["RdBu"]
 cmap = matplotlib.colors.ListedColormap(colors)
 
-naming = pd.read_csv("Good_notes_240320.csv")
+naming = pd.DataFrame() # pd.read_csv("Good_notes_240320.csv")
 dico = pd.read_csv('name_mapping.csv', sep=";")
 
 period = 8
