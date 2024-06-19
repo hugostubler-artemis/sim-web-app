@@ -1,5 +1,6 @@
 reportlab
 matplotlib
+streamlit
 seaborn
 time
 math
