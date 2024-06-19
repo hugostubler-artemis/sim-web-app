@@ -36,7 +36,11 @@ colors = ["RdBu"]
 cmap = matplotlib.colors.ListedColormap(colors)
 
 naming = pd.DataFrame() # pd.read_csv("Good_notes_240320.csv")
-dico = pd.read_csv('name_mapping.csv', sep=";")
+script_dir = os.path.dirname(os.path.abspath(__file__))
+# Construct the full path to the CSV file
+csv_path = os.path.join(script_dir, 'name_mapping.csv')
+
+dico = pd.read_csv(csv_path, sep=";")
 
 period = 8
 min_bsp = 20
