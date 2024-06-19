@@ -499,17 +499,17 @@ if st.button("Generate PDF Report") and uploaded_csv:
      #                                                                      'turn_min_rh', 'turn_time', 'dev_yaw_rate',
      #                                                                      'turn_rh', 'turn_pitch', 'turn_heel', 'poptime']].T.style.format(precision=1).background_gradient(cmap="YlGnBu", axis=1)
     # dfi.export(tack_table, f'{pngs_path}/tack_table.png',table_conversion = 'matplotlib')
-    plt.close()
-    gybe_table = man[man.man_type == 'gybe'].groupby('tackside').median()[['tws', 'flying', 'vmg_loss', 'vmg_loss_target', 'distance', 'entry_bsp', 'exit_bsp',
-                                                                           'min_bsp', 'entry_twa', 'exit_twa', 'exit_vmg',
-                                                                           'entry_mainsheet', 'entry_traveller', 'entry_jib_sheet',
-                                                                           'entry_rh_stability', 'entry_rh', 'entry_heel', 'entry_pitch',
-                                                                           'exit_traveller', 'exit_mainsheet', 'exit_jib_sheet',
-                                                                           'exit_rh', 'exit_heel', 'exit_pitch', 'max_yaw_rate',
-                                                                           'turn_min_rh', 'turn_time', 'dev_yaw_rate',
-                                                                           'turn_rh', 'turn_pitch', 'turn_heel', 'poptime']].T.style.format(precision=1).background_gradient(cmap="YlGnBu", axis=1)
+    #plt.close()
+    #gybe_table = man[man.man_type == 'gybe'].groupby('tackside').median()[['tws', 'flying', 'vmg_loss', 'vmg_loss_target', 'distance', 'entry_bsp', 'exit_bsp',
+    #                                                                       'min_bsp', 'entry_twa', 'exit_twa', 'exit_vmg',
+    #                                                                       'entry_mainsheet', 'entry_traveller', 'entry_jib_sheet',
+     #                                                                      'entry_rh_stability', 'entry_rh', 'entry_heel', 'entry_pitch',
+    #                                                                       'exit_traveller', 'exit_mainsheet', 'exit_jib_sheet',
+     #                                                                      'exit_rh', 'exit_heel', 'exit_pitch', 'max_yaw_rate',
+     #                                                                      'turn_min_rh', 'turn_time', 'dev_yaw_rate',
+     #                                                                      'turn_rh', 'turn_pitch', 'turn_heel', 'poptime']].T.style.format(precision=1).background_gradient(cmap="YlGnBu", axis=1)
     # dfi.export(gybe_table, f'{pngs_path}/gybe_table.png',table_conversion = 'matplotlib')
-    plt.close()
+    #plt.close()
 
     # pdf_name = f"pdfs/PerfReport_{race}_240319"
     pdf_file_path = f"{sample}.pdf"
