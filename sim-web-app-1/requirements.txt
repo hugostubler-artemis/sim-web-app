@@ -3,5 +3,6 @@ matplotlib
 streamlit
 seaborn
 statsmodels
+chromium-chromedriver
 dataframe_image
 arrow
