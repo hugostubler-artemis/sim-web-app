@@ -3,4 +3,5 @@ matplotlib
 streamlit
 seaborn
 statsmodels
+dataframe_image
 arrow
