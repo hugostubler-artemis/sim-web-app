@@ -29,6 +29,7 @@ from Analyser.loader import get_sim_crew
 from Analyser.loader import get_metadata, get_one_boat_logs_bis
 import seaborn as sns
 import time
+import matplotlib
 from matplotlib import rcParams
 cm = sns.light_palette("green", as_cmap=True)
 colors = ["RdBu"]
