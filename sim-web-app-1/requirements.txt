@@ -1,5 +1,4 @@
 reportlab
-pylab
 matplotlib
 seaborn
 numpy
