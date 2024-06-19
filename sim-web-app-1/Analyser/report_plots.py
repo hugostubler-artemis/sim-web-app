@@ -10,7 +10,7 @@ import statsmodels.api as sm
 import datetime
 import seaborn as sns
 from matplotlib import rcParams
-from matplotlib.cm import get_cmap
+# from matplotlib.cm import get_cmap
 
 
 def hue_regplot(data, x, y, hue, palette, **kwargs):
