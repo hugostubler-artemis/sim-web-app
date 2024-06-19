@@ -300,11 +300,11 @@ def get_one_boat_logs_bis(all_data, dico, naming, freq):
             "end_timestamp",
             "sim_used",
         ]:
-            #data[f"{names}"] = data.apply(
-            #    lambda x: get_metadata(
-            #        x.TACK, x.Datetime, x.Boat, naming, names),
-            #    axis=1,
-            #)
+            data[f"{names}"] = data.apply(
+                lambda x: get_metadata(
+                    x.TACK, x.Datetime, x.Boat, naming, names),
+                axis=1,
+            )
     st.success(f"All done with creating the logs !")
     time.sleep(1)
     return data
