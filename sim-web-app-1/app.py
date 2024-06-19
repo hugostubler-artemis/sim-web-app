@@ -39,7 +39,7 @@ naming = pd.DataFrame() # pd.read_csv("Good_notes_240320.csv")
 script_dir = os.path.dirname(os.path.abspath(__file__))
 # Construct the full path to the CSV file
 csv_path = os.path.join(script_dir, 'name_mapping.csv')
-
+pngs_path = os.path.join(script_dir, 'pngs')
 dico = pd.read_csv(csv_path, sep=";")
 
 period = 8
@@ -150,10 +150,10 @@ def create_page_with_layout(file_name):
     # Create table with upwind and downwind plots side by side
     table_data_1 = [
         [
-            # [Image('pngs/naming.png', width=220, height=220), Image('pngs/wind_log.png',  width=220, height=200),
-            Image('pngs/boat_perc_phases.png', width=100, height=100)],
-        [Image('pngs/tracking.png', width=300, height=200), Image('pngs/wind_phases.png',  width=220, height=200),
-         Image('pngs/crew_perc_phases.png', width=150, height=150)]
+            # [Image(f'{pngs_path}/naming.png', width=220, height=220), Image('pngs/wind_log.png',  width=220, height=200),
+            # Image('pngs/', width=100, height=100)],
+        [Image(f'{pngs_path}/tracking.png', width=300, height=200), Image(f'{pngs_path}/wind_phases.png',  width=220, height=200),
+         Image(f'{pngs_path}/crew_perc_phases.png', width=150, height=150)]
     ]
     table1 = Table(table_data_1)
     elements.append(table1)
@@ -162,8 +162,8 @@ def create_page_with_layout(file_name):
     table_data_2 = [
         [Paragraph("UPWIND", styles["Heading2"]),
          Paragraph("DOWNWIND", styles["Heading2"])],
-        [Image('pngs/report_up.png', width=230, height=360),
-         Image('pngs/report_down.png',  width=230, height=360)],
+        [Image(f'{pngs_path}/report_up.png', width=230, height=360),
+         Image(f'{pngs_path}/report_down.png',  width=230, height=360)],
 
     ]
     table2 = Table(table_data_2)
