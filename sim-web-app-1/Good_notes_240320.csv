@@ -1,0 +1,15 @@
+,Date,start_timestamp,end_timestamp,helm_PORT,helm_STB,trimmer_PORT,trimmer_STB,sim_used,run_goal,GunTime,csv_file,avg_TWS,wind_type,wave_type,Comments,Unnamed: 15,Unnamed: 16,Unnamed: 17,Unnamed: 18,Unnamed: 19,Unnamed: 20,Unnamed: 21,Unnamed: 22,Unnamed: 23,Unnamed: 24,Unnamed: 25,STBD,PORT
+0,2024-03-20,2024-03-20 08:15:00,2024-03-20 11:38:00,Oscar,Fredrik,Hugo,Felicia,Travel SIM,Racing ,,,,Unspecified,Unspecified,,,,,,,,,,,,,FredrikFelicia,OscarHugo
+1,2024-03-20,2024-03-20 08:15:01,2024-03-20 12:38:00,Julia,ida,Rebecca,Lovisa,Travel SIM,Racing ,,,,,,,,,,,,,,,,,,idaLovisa,JuliaRebecca
+2,2024-03-20,2024-03-20 11:45:00,2024-03-20 12:26:17,Oscar,Fredrik,Hugo,Felicia,Belfast SIM,Racing ,,,,,,,,,,,,,,,,,,FredrikFelicia,OscarHugo
+3,2024-03-20,2024-03-20 11:45:00,2024-03-20 12:26:17,Julia,ida,Rebecca,Lovisa,Travel SIM,Racing ,,,,,,,,,,,,,,,,,,idaLovisa,JuliaRebecca
+4,2024-03-20,2024-03-20 09:52:00,2024-03-20 10:05:00,Julia,ida,Rebecca,Lovisa,Belfast SIM,Racing ,,,,,,,,,,,,,,,,,,idaLovisa,JuliaRebecca
+5,2024-03-20,2024-03-20 10:09:00,2024-03-20 10:25:00,Julia,ida,Rebecca,Lovisa,Belfast SIM,Racing ,,,,,,,,,,,,,,,,,,idaLovisa,JuliaRebecca
+6,2024-03-20,2024-03-20 10:34:00,2024-03-20 10:46:00,Julia,ida,Rebecca,Lovisa,Belfast SIM,Racing ,,,,,,,,,,,,,,,,,,idaLovisa,JuliaRebecca
+7,2024-03-20,2024-03-20 10:52:00,2024-03-20 11:04:00,Julia,ida,Rebecca,Lovisa,Belfast SIM,Racing ,,,,,,,,,,,,,,,,,,idaLovisa,JuliaRebecca
+8,2024-03-20,2024-03-20 11:25:00,2024-03-20 11:37:00,Julia,ida,Rebecca,Lovisa,Belfast SIM,Racing ,,,,,,,,,,,,,,,,,,idaLovisa,JuliaRebecca
+9,2024-03-20,2024-03-20 09:52:00,2024-03-20 10:05:00,Oscar,Fredrik,Hugo,Felicia,Travel SIM,Racing ,,,,,,,,,,,,,,,,,,FredrikFelicia,OscarHugo
+10,2024-03-20,2024-03-20 10:09:00,2024-03-20 10:25:00,Oscar,Fredrik,Hugo,Felicia,Travel SIM,Racing ,,,,,,,,,,,,,,,,,,FredrikFelicia,OscarHugo
+11,2024-03-20,2024-03-20 10:34:00,2024-03-20 10:46:00,Oscar,Fredrik,Hugo,Felicia,Travel SIM,Racing ,,,,,,,,,,,,,,,,,,FredrikFelicia,OscarHugo
+12,2024-03-20,2024-03-20 10:52:00,2024-03-20 11:04:00,Oscar,Fredrik,Hugo,Felicia,Travel SIM,Racing ,,,,,,,,,,,,,,,,,,FredrikFelicia,OscarHugo
+13,2024-03-20,2024-03-20 11:25:00,2024-03-20 11:37:00,Oscar,Fredrik,Hugo,Felicia,Travel SIM,Racing ,,,,,,,,,,,,,,,,,,FredrikFelicia,OscarHugo
