@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 import numpy as np
-import dataframe_image as dfi
+# import dataframe_image as dfi
 from Analyser.loader import get_good_naming
 # from Analyser.loader import get_all_logs
 from Analyser.phases_analysis import upwind_downwind
