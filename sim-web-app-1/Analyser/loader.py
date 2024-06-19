@@ -288,9 +288,9 @@ def get_one_boat_logs_bis(all_data, dico, naming, freq):
     data["VMG%"] = (data["VMG"] / data["Tgt_VMG"] * 100).abs()
     data["BSP%"] = data["BSP"] / data["Tgt_BSP"] * 100
     data["CWA%"] = data["CWA"] / data["Tgt_CWA"] * 100
-    data["Crew"] = data.apply(
-        lambda x: get_sim_crew(x.TACK, x.Datetime, x.Boat, naming), axis=1
-    )
+    data["Crew"] = '' #data.apply(
+        #lambda x: get_sim_crew(x.TACK, x.Datetime, x.Boat, naming), axis=1
+    # )
     for names in naming.columns:
         if names not in [
             "Unnamed: 0",
@@ -300,11 +300,11 @@ def get_one_boat_logs_bis(all_data, dico, naming, freq):
             "end_timestamp",
             "sim_used",
         ]:
-            data[f"{names}"] = data.apply(
-                lambda x: get_metadata(
-                    x.TACK, x.Datetime, x.Boat, naming, names),
-                axis=1,
-            )
+            #data[f"{names}"] = data.apply(
+            #    lambda x: get_metadata(
+            #        x.TACK, x.Datetime, x.Boat, naming, names),
+            #    axis=1,
+            #)
     st.success(f"All done with creating the logs !")
     time.sleep(1)
     return data
