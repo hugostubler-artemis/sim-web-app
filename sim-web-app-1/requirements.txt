@@ -1,7 +1,6 @@
 reportlab
 matplotlib
 seaborn
-numpy
 time
 math
 statsmodels
