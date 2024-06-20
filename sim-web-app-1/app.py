@@ -480,12 +480,12 @@ if st.button("Generate PDF Report") and uploaded_csv:
     plt.savefig(f'{pngs_path}/heatmap_down.png')
     plt.close()
 
-    report_up = get_phase_report(upwind)
+    # report_up = get_phase_report(upwind)
     # dfi.export(report_up, f'{pngs_path}/report_up.png', table_conversion = 'matplotlib')
-    plt.close()
-    report_down = get_phase_report(downwind)
+    # plt.close()
+    # report_down = get_phase_report(downwind)
     # dfi.export(report_down, f'{pngs_path}/report_down.png', table_conversion = 'matplotlib')
-    plt.close()
+    # plt.close()
 
     sns.heatmap(upwind[var_of_interest].corr(), annot=True)
     plt.savefig(f'{pngs_path}/heatmap_up.png')
