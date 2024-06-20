@@ -381,7 +381,7 @@ if st.button("Generate PDF Report") and uploaded_csv:
     time.sleep(1)
     man, all_man = get_man_details_v2(
         filtered_logs, timing, percent, bsp_limit, man_list)
-    st.write(f"Number of manoeuvres :{len(man}")
+    st.write(f"Number of manoeuvres :{len(man)}")
     time.sleep(1)
     upwind, downwind = upwind_downwind(all_phases)
     # .style.background_gradient(cmap="YlGnBu", axis=0).set_precision(2)
