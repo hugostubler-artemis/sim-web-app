@@ -251,7 +251,7 @@ def get_phases(
     last_valid = data.index[0]
     for id, row in data.iterrows():
         delta = (get(id) - get(last_valid)).total_seconds()
-        if delta > period - 2:
+        if delta > period + 2:
             liste.append(id)
             last_valid = row.Datetime
 
